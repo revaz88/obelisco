@@ -1,0 +1,13 @@
+{
+    "type": 1,
+    "name": "Usuarios",
+    "description": "Administrar los usuarios del sistema",
+    "homepage": "http://zacatecoluca.gob.sv",
+    "authors": [
+        {
+            "name": "",
+            "email": "alex.sv@gmail.com",
+            "homepage": "http://http://zacatecoluca.gob.sv"
+        }
+    ]
+}

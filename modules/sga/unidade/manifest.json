@@ -1,0 +1,18 @@
+{
+    "type": 0,
+    "name": "Configuración",
+    "description": "Módulo de administración de la unidad actual",
+    "homepage": "http://saturno.com.sv",
+    "authors": [
+        {
+            "name": "",
+           "email": "alex.sv@gmail.com",
+            "homepage": "http://saturno.com.sv"
+        }
+    ],
+    "scripts": {
+        "post-install": [
+            "DataFixture::install"
+        ]
+    }
+}

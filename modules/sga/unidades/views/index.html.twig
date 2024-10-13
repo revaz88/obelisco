@@ -1,0 +1,19 @@
+{% extends "crud/list.html.twig" %}
+{% block thead %}
+    <th>{% trans %}Código{% endtrans %}</th>
+    <th>{% trans %}Nombre{% endtrans %}</th>
+    <th>{% trans %}Grupo{% endtrans %}</th>
+    <th>{% trans %}Estado{% endtrans %}</th>
+{% endblock %}
+{% block tbody %}
+    <td>{{ item.codigo }}</td>
+    <td>{{ item.nome }}</td>
+    <td>{{ item.grupo.nome }}</td>
+    <td>
+        {% if item.status == 1 %}
+        <span class="status-active">{% trans %}Activo{% endtrans %}</span>
+        {% else %}
+        <span class="status-inactive">{% trans %}Inactivo{% endtrans %}</span>
+        {% endif %}
+    </td>
+{% endblock %}

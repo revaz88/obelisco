@@ -1,0 +1,18 @@
+{
+    "type": 1,
+    "name": "Cargos",
+    "description": "Administrar los cargos del sistema",
+    "homepage": "http://saturno.com.sv",
+    "authors": [
+        {
+            "name": "",
+            "email": "alex.sv@gmail.com",
+            "homepage": "http://saturno.com.sv"
+        }
+    ],
+    "scripts": {
+        "post-install": [
+            "DataFixture::install"
+        ]
+    }
+}

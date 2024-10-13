@@ -1,0 +1,18 @@
+{
+    "type": 1,
+    "name": "Locais",
+    "description": "Gestión de los lugares de atención",
+    "homepage": "http://zacatecoluca.gob.sv",
+    "authors": [
+        {
+            "name": " Sánchez ",
+            "email": "alex.sv@gmail.com",
+            "homepage": "http://zacatecoluca.gob.sv"
+        }
+    ],
+    "scripts": {
+        "post-install": [
+            "DataFixture::install"
+        ]
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "name": "novosga/novosga",
+    "type": "project",
+    "description": "Sistema de Gerenciamento de Atendimento",
+    "keywords": [
+        "sga",
+        "atendimento",
+        "fila",
+        "gerenciamento",
+        "controle"
+    ],
+    "homepage": "http://www.novosga.org",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "",
+            "email": "alex.sv@gmail.com",
+            "homepage": "http://saturno.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "ext-pdo": "*",
+        "ext-json": "*",
+        "ext-gettext": "*",
+        "slim/slim": "~2.6",
+        "slim/views": "~0.1",
+        "twig/twig": "~1.18",
+        "twig/extensions": "~1.2",
+        "doctrine/orm": "~2.5",
+        "bshaffer/oauth2-server-php": "~1.7"
+    },
+    "suggest": {
+        "ext-mysql": "For MySQL or MariaDB databases",
+        "ext-pgsql": "For PostgreSQL databases"
+    },
+    "autoload": {
+        "psr-0": {
+            "Novosga\\": "src/",
+            "modules\\": "./"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}

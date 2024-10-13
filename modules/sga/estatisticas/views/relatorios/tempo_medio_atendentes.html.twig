@@ -1,0 +1,35 @@
+<div class="header">
+    <p>{% trans %}Período de {{ dataInicial }} a {{ dataFinal }}{% endtrans %}</p>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>{% trans %}Usuario{% endtrans %}</th>
+            <th>{% trans %}Atenciones{% endtrans %}</th>
+            <th title="{% trans %}Tiempo medio de espera{% endtrans %}">{% trans %}TME{% endtrans %}</th>
+            <th title="{% trans %}Tiempo medio de desplazamiento{% endtrans %}">{% trans %}TMD{% endtrans %}</th>
+            <th title="{% trans %}Tiempo medio de atención{% endtrans %}">{% trans %}TMA{% endtrans %}</th>
+            <th>{% trans %}Tiempo total{% endtrans %}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for dado in relatorio.dados %}
+        <tr>
+            <td class="strong">{{ dado.atendente }}</td>
+            <td>{{ dado.total }}</td>
+            <td>{{ dado.espera|secFormat }}</td>
+            <td>{{ dado.deslocamento|secFormat }}</td>
+            <td>{{ dado.atendimento|secFormat }}</td>
+            <td>{{ dado.tempoTotal|secFormat }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<div>
+    <h4>{% trans %}Leyenda{% endtrans %}</h4>
+    <ul>
+        <li><strong>{% trans %}TME{% endtrans %}</strong>: {% trans %}Tiempo medio de espera{% endtrans %}</li>
+        <li><strong>{% trans %}TMD{% endtrans %}</strong>: {% trans %}Tiempo medio de desplazamiento{% endtrans %}</li>
+        <li><strong>{% trans %}TMA{% endtrans %}</strong>: {% trans %}Tiempo medio de atención{% endtrans %}</li>
+    </ul>
+</div>

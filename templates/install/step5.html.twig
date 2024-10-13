@@ -1,0 +1,25 @@
+{% extends "install/install.html.twig" %}
+
+{% block content %}
+    <div id="step_5">
+        <h1>{% trans %}Instalar{% endtrans %}</h1>
+        <div id="install_error" class="alert alert-danger" style="display: none">
+        </div>
+        <div id="install_success" class="alert alert-success" style="display: none">
+        </div>
+        <p>{% trans %}Clic para iniciar el proceso final de instalación{% endtrans %}</p>
+        <div class="alert alert-warning">
+            <strong>{% trans %}Atención{% endtrans %}</strong>: 
+            {% trans %}Al hacer clic en instalar, en caso que ya exista una instalación de saturno en la base de datos especificada, la misma será "
+"actualizada.{% endtrans %}
+        </div>
+        <div class="btns">
+            <button id="btn_install_final" onclick="SGA.Install.doInstall()" class="btn btn-success"
+                    title="{% trans %}Clic para iniciar el proceso final de instalación{% endtrans %}">{% trans %}Instalar{% endtrans %}</button>
+
+            <button id="btn_redirect" onclick="window.location = '{{ baseUrl() }}'" class="btn btn-primary" style="display:none"
+                    title="{% trans %}Clic para iniciar el uso de saturno{% endtrans %}">{% trans %}Ir a la pantalla de Inicio de Sesión{% endtrans %}</button>
+            <span id="install-loading" class="mini-loading" style="display: none"></span>
+        </div>
+    </div>
+{% endblock %}

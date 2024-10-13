@@ -1,0 +1,13 @@
+{
+    "type": 0,
+    "name": "Triagem",
+    "description": "Administrar la distribución de contraseñas de la unidad actual",
+    "homepage": "http://saturno.com.sv",
+    "authors": [
+        {
+            "name": "",
+            "email": "alex.sv@gmail.com",
+            "homepage": "http://saturno.com.sv"
+        }
+    ]
+}

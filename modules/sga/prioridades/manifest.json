@@ -1,0 +1,18 @@
+{
+    "type": 1,
+    "name": "Prioridades",
+    "description": "Administrar las prioridades del sistema",
+    "homepage": "http://zacatecoluca.gob.sv",
+    "authors": [
+        {
+            "name": "",
+            "email": "alex.svo@gmail.com",
+            "homepage": "http://zacatecoluca.gob.sv"
+        }
+    ],
+    "scripts": {
+        "post-install": [
+            "DataFixture::install"
+        ]
+    }
+}

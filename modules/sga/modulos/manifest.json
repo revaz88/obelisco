@@ -1,0 +1,13 @@
+{
+    "type": 1,
+    "name": "Módulos",
+    "description": "Gestione los módulos instalados",
+    "homepage": "http://zacatecoluca.gob.sv",
+    "authors": [
+        {
+            "name": "",
+            "email": "alex.sv@gmail.com",
+            "homepage": "http://zacatecoluca.gob.sv"
+        }
+    ]
+}

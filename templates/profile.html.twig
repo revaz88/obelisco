@@ -1,0 +1,80 @@
+{% extends "main.html.twig" %}
+{% block content %}
+<div id="perfil">
+    <div class="module-content">
+        <div class="header">
+            <h2>{% trans %}Perfil{% endtrans %}</h2>
+            <p>{% trans %}Vea y actualice su perfil{% endtrans %}</p>
+        </div>
+        <form method="post" action="{{ baseUrl() }}/profile">
+            {% if salvo %}
+            <div class="alert alert-success">
+                {% trans %}Perfil actualizado exitosamente{% endtrans %}
+            </div>
+            {% endif %}
+            <div class="form-group">
+                <label for="login">{% trans %}Iniciar sesión{% endtrans %}</label>
+                <input id="login" type="text" class="w150 form-control" value="{{ usuario.login }}" disabled="true" />
+            </div>
+            <div class="form-group">
+                <label for="nome">{% trans %}Nombre{% endtrans %}</label>
+                <input id="nome" type="text" name="nome" class="w150 form-control" value="{{ usuario.nome }}" />
+            </div>
+            <div class="form-group">
+                <label for="sobrenome">{% trans %}Apellido{% endtrans %}</label>
+                <input id="sobrenome" type="text" name="sobrenome" class="w300 form-control" value="{{ usuario.sobrenome }}" />
+            </div>
+            {% if usuario.senha %}
+            <div class="form-group">
+                <a href="#dialog-senha"
+                   class="btn btn-default"
+                   data-toggle="modal">
+                    <span class="glyphicon glyphicon-exclamation-sign"></span> 
+                    {% trans %}Modificar contraseña{% endtrans %}
+                </a>
+            </div>
+            {% endif %}
+            <div class="buttons">
+                <button type="submit" class="btn btn-primary">
+                    {% trans %}Guardar{% endtrans %}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="dialog-senha" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">{% trans %}Modificar contraseña{% endtrans %}</h4>
+            </div>
+            <div class="modal-body">
+                <div id="dialog-message" class="alert" style="display:none">
+                </div>
+                <div class="form-group required">
+                    <label for="senha_atual" class="w150">{% trans %}Contraseña actual{% endtrans %}</label>
+                    <input id="senha_atual" type="password" class="form-control" />
+                </div>
+                <div class="form-group required">
+                    <label for="senha_nova" class="w150">{% trans %}Nueva contraseña{% endtrans %}</label>
+                    <input id="senha_nova" type="password" class="form-control" />
+                </div>
+                <div class="form-group required">
+                    <label for="senha_confirmacao" class="w150">{% trans %}Confirmar nueva contraseña{% endtrans %}</label>
+                    <input id="senha_confirmacao" type="password" class="form-control" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">{% trans %}Cerrar{% endtrans %}</button>
+                <button type="button" class="btn btn-primary" onclick="SGA.Perfil.alterarSenha()">{% trans %}Modificar{% endtrans %}</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    SGA.Perfil.labelSenhaAlterada = "{% trans %}Contraseña modificada exitosamente{% endtrans %}";
+</script>
+{% endblock %}

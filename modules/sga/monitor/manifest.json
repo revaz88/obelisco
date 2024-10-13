@@ -1,0 +1,13 @@
+{
+    "type": 0,
+    "name": "Monitor",
+    "description": "Administrar las contraseñas esperando la atención",
+    "homepage": "http://saturno.com.sv",
+    "authors": [
+        {
+            "name": "",
+            "email": "alex.sv@gmail.com",
+            "homepage": "http://saturno.com.sv"
+        }
+    ]
+}

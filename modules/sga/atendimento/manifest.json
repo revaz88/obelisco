@@ -1,0 +1,13 @@
+{
+    "type": 0,
+    "name": "Atendimento",
+    "description": "Efetue o atendimento às senhas distribuídas dos serviços que você atende",
+    "homepage": "http://zacatecoluca.gob.sv",
+    "authors": [
+        {
+            "name": "",
+            "email": "alex.sv@gmail.com",
+            "homepage": "http://saturno.com.sv"
+        }
+    ]
+}

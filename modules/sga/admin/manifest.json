@@ -1,0 +1,13 @@
+{
+    "type": 1,
+    "name": "Administração",
+    "description": "Configurações gerais do sistema",
+    "homepage": "http://zacatecoluca.gob.sv",
+    "authors": [
+        {
+            "name": "",
+            "email": "alex.sv@gmail.com",
+            "homepage": "http://saturno.com.sv"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+/**
+ * Novo SGA - Triagem Impressão de senha
+ * 
+ */
+ 
+#senha {
+    width: 200px;
+    height: 130px;
+    margin: auto;
+    text-align: center;
+    background: #ffffff;
+}
+
+#senha #senha-header {
+    font-size: 15pt;
+    text-align: center;
+}
+
+#senha #senha-header .data {
+    font-size: 15pt;
+}
+
+#senha #senha-body {
+    font-size: 65pt;
+    line-height: 65pt;
+    font-weight: bold;
+}
+
+#senha  #senha-body .descricao {
+    text-align: center;
+    font-size: 12pt;
+    line-height: 12pt;
+    display: block;
+}
+
+#senha #senha-footer {
+    font-size: 12pt;
+    text-align: center;
+}

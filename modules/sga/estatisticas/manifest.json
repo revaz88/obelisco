@@ -1,0 +1,13 @@
+{
+    "type": 1,
+    "name": "Estatísticas",
+    "description": "Visualice y exporte estadístico e informes sobre el sistema",
+    "homepage": "http://zacatecoluca.gob.sv",
+    "authors": [
+        {
+            "name": "",
+            "email": "alex.sv@gmail.com",
+            "homepage": "http://saturno.com.sv"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "type": 1,
+    "name": "Grupos",
+    "description": "Administre los grupos del sistema",
+    "homepage": "http://zacatecoluca.gob.sv",
+    "authors": [
+        {
+            "name": " Sánchez ",
+            "email": "alex.sv@gmail.com",
+            "homepage": "http://zacatecoluca.gob.sv"
+        }
+    ],
+    "scripts": {
+        "post-install": [
+            "DataFixture::install"
+        ]
+    }
+}

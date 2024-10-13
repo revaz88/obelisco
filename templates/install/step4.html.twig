@@ -1,0 +1,45 @@
+{% extends "install/install.html.twig" %}
+
+{% block content %}
+    <div id="step_4">
+        {% if currVersion %}
+        <h2>{% trans %}Una versión ya instalada de saturno fue identificada{% endtrans %}</h2>
+        <p>{% trans %}------------------------- ------------------------{% endtrans %}</p>
+        <p>{% trans %}El instalador ejecutará los scripts de migración para actualizar la base de datos. En caso que usted no quiera actualizar, asegúrese que la base esté vacía y actualice esta página.{% endtrans %}</p>
+        <script type="text/javascript">SGA.Install.isMigration = true;</script>
+        {% else %}
+        <form role="form" onsubmit="return false">
+            <fieldset>
+                <legend>{% trans %}Administrador{% endtrans %}</legend>
+                <div id="db_admin_error" class="alert alert-danger" style="display: none"></div>
+                <div class="form-group">
+                    <label for="nome">{% trans %}Nombre{% endtrans %}:</label>
+                    <input type="text" id="nome" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="sobrenome">{% trans %}Apellido{% endtrans %}:</label>
+                    <input type="text" id="sobrenome" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="login">{% trans %}Usuario{% endtrans %}:</label>
+                    <input type="text" id="login" onkeyup="SGA.Form.loginValue(this)" maxlength="20" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="senha">{% trans %}Contraseña{% endtrans %}:</label>
+                    <input type="password" id="senha" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="senha_2">{% trans%}Confirmar contraseña{% endtrans %}:</label>
+                    <input type="password" id="senha_2" class="form-control" />
+                </div>
+                <script type="text/javascript">
+                    {% for field, message in data.admin %}
+                    SGA.Install.adminData.{{ field }} = "{{ data.admin[field] }}";
+                    {% endfor %}
+                    SGA.Install.loadAdminData();
+                </script>
+            </fieldset>
+        </form>
+        {% endif %}
+    </div>
+{% endblock %}
